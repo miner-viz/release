@@ -18,6 +18,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        repository: miner-viz/miner-viz
+        ssh-key: ${{ secrets.MINER_VIZ_SRC_DEPLOY_PRIVATE_KEY }}
+        submodules: true
 
     - uses: actions/setup-python@v5
       with:
